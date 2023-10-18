@@ -11,24 +11,25 @@ import './App.css'
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 
-
-
 function App() {
 
-  return (
-    <ReactLenis root>
+  function App() {
+    return (
+      <ReactLenis root>
         <BrowserRouter>
           <Routes>
             <Route index element={<Home />} />
-            <Route path='/projetEnergcuma' element={<ProjetEnergcuma />} />
-            <Route path='/MesProjets' element={<MesProjets />} />
-            <Route path='/Contact' element={<PageContact />} />
-            <Route path='/projetEDN' element={<ProjetEDN />} />
-            <Route path='*' element={<NoPage />} /> 
+            <Route path='/Portfolio-react-vite/Mesprojets' element={<MesProjets />} />
+            <Route path='/Portfolio-react-vite/Contact' element={<PageContact />} />
+            <Route path='/Portfolio-react-vite/projetEDN' element={<ProjetEDN />} />
+            <Route path='/Portfolio-react-vite/projetEnergcuma' element={<ProjetEnergcuma />} />
+            <Route path='*' element={<NoPage />} />
           </Routes>
         </BrowserRouter>
-    </ReactLenis>       
-  );
+      </ReactLenis>
+    );
+  }
 }
+  
 
 export default App;
