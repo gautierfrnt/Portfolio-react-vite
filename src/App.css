@@ -1,0 +1,55 @@
+[data-theme="dark"] {
+  /* Colours */
+  --gris-blanc: #D3CCC1;
+  --noir: #141414;
+  --rouge: #ff4d00;
+
+  /* Fonts */
+  --font-roboto: "Roboto";
+}
+
+[data-theme="light"] {
+  --gris-blanc: #141414;
+  --noir: #D3CCC1;
+  --rouge: #141414;
+}
+
+html{
+  background-color: #ff4d00;
+}
+
+.noise::before{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  /* you can control opacity of noise  */
+  opacity: 0.05;  
+  z-index: 1000;
+  pointer-events: none;
+  background: url(assets/noise.gif);
+}
+
+@font-face{
+  font-family: 'ClashDisplay-Bold';
+  src: url('./fonts/ClashDisplay-Bold.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'ClashDisplay-Medium';
+  src: url('./fonts/ClashDisplay-Medium.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'ClashDisplay-Light';
+  src: url('./fonts/ClashDisplay-Light.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'ClashDisplay-Regular';
+  src: url('./fonts/ClashDisplay-Regular.ttf') format('truetype');
+}
+
+
