@@ -1,35 +1,36 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import styles from "./App.css";
-import Home from "./pages/Home";
-import ProjetEnergcuma from './pages/ProjetEnergcuma'
-import ProjetEDN from './pages/ProjetEDN'
-import NoPage from './pages/NoPage'
-import PageContact from './pages/PageContact'
-import MesProjets from './pages/MesProjets'
-import styles from './components/styles/style.css'
-import './App.css'
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import React, { useState } from 'react';
+import { ReactLenis } from '@studio-freight/react-lenis';
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Parcours from "./components/Parcours";
+import Projets from "./components/Projets";
+import Contact from "./components/Contact";
+import F from "./components/F";
+import style from './components/styles/style.css'
 
 
-function App() {
+export default function App() {
+  const [theme, setTheme] = useState('dark');
 
-  function App() {
-    return (
-      <ReactLenis root>
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path='/Portfolio-react-vite/Mesprojets' element={<MesProjets />} />
-            <Route path='/Portfolio-react-vite/Contact' element={<PageContact />} />
-            <Route path='/Portfolio-react-vite/projetEDN' element={<ProjetEDN />} />
-            <Route path='/Portfolio-react-vite/projetEnergcuma' element={<ProjetEnergcuma />} />
-            <Route path='*' element={<NoPage />} />
-          </Routes>
-        </BrowserRouter>
-      </ReactLenis>
-    );
-  }
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
+  return (
+    <ReactLenis root>
+      <div className={`App ${theme}`} data-theme={theme}>
+        <div className="noise"></div>
+        <div className="container">
+          <Navbar theme={theme} toggleTheme={toggleTheme} />
+          <F />
+          <About />
+          <Skills />
+          <Parcours />
+          <Projets />
+          <Contact />
+        </div>
+      </div>
+    </ReactLenis>
+  );
 }
-  
-
-export default App;

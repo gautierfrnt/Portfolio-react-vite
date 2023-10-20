@@ -7,7 +7,7 @@ import github from '../assets/github.png'
 import cvpdf from '../assets/cv.pdf';
 import FlashContact from './FlashContact'
 
-const Contact = () => {
+export default function Contact () {
     const form = useRef();
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
@@ -67,5 +67,3 @@ const Contact = () => {
     </>
     );
 };
-  
-export default Contact;

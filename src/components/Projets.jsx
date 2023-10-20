@@ -1,7 +1,7 @@
 import energcuma from '../assets/energcuma.png'
 import edn from '../assets/E-DN.png'
 
-const Projets = () => {
+export default function Projets ()  {
     return (
     <>
         <h1 className="red-title">Mes projets</h1>
@@ -13,4 +13,3 @@ const Projets = () => {
     )
 };
   
-export default Projets;

@@ -2,7 +2,7 @@ import React from 'react';
 import cv from '../assets/cv.pdf';
 import Person from "./Person"
 
-const About = () => {
+export default function About () {
 
     return (
     <>
@@ -24,5 +24,3 @@ const About = () => {
     </>
     );
 };
-  
-export default About;

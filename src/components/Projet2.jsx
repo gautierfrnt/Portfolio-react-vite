@@ -3,7 +3,7 @@ import wordpress from '../assets/wordpress.png'
 import figma from '../assets/figma.png'
 import video from '../assets/edn.mp4'
 
-const Projet2 = () => {
+export default function Projet2 () {
     return (
     <>
         <div className='projet-flex'>
@@ -32,5 +32,3 @@ const Projet2 = () => {
     </>
     )
 };
-  
-export default Projet2;

@@ -5,7 +5,7 @@ import figma from '../assets/figma.png'
 import adobe from '../assets/adobe.png'
 import video from '../assets/ENERGCUMA.mp4'
 
-const Projet1 = () => {
+export default function Projet1 () {
     return (
     <>
         <div className='projet-flex'>
@@ -37,5 +37,3 @@ const Projet1 = () => {
     </>
     )
 };
-  
-export default Projet1;

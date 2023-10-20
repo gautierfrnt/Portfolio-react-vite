@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { MeshBasicMaterial } from "three";
 
 
-export default function F() {
+export default function FlashContact() {
 
     const gltf = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/lightning/model.gltf')
 

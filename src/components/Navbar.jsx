@@ -3,8 +3,9 @@ import logo from '../assets/Logo.png';
 import logonoir from '../assets/logo-noir.png';
 import sun from '../assets/sun.png';
 import moon from '../assets/moon-black.png';
+import { Link, Outlet } from 'react-router-dom';
 
-const Navbar = ({ theme, toggleTheme }) => {
+export default function Navbar ({theme, toggleTheme }) {
   const [isDayMode, setIsDayMode] = useState(true);
 
   const toggleDayNightMode = () => {
@@ -26,9 +27,9 @@ const Navbar = ({ theme, toggleTheme }) => {
         </a>
       </div>
       <div className='link'>
-        <a href="./">Home</a>
-        <a href="./MesProjets">Projets</a>
-        <a href="./Contact">Contact</a>
+        <Link to="/Portfolio-react-vite/">Home</Link>
+        <Link to="/Portfolio-react-vite/Mesprojets">Projets</Link>
+        <Link to="/Portfolio-react-vite/PageContact">Contact</Link>
         <button onClick={toggleDayNightMode}>
           {isDayMode ? <img src={sun} alt="Light" /> : <img src={moon} alt="Dark" />}
         </button>
@@ -37,4 +38,3 @@ const Navbar = ({ theme, toggleTheme }) => {
   );
 };
 
-export default Navbar;

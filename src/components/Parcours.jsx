@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Parcours = () => {
+export default function Parcours () {
 
     const Icon = useRef();
     const Icon2 = useRef();
@@ -67,5 +67,3 @@ const Parcours = () => {
     </>
     );
 };
-  
-export default Parcours;

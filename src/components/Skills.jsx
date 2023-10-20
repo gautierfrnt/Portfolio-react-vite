@@ -14,7 +14,7 @@ import figma from '../assets/figma.png'
 
 
 
-const Skills = () => {
+export default function Skills ()  {
     return (
     <>
         <h1 className='red-title'>Mes compétences</h1>
@@ -99,5 +99,3 @@ const Skills = () => {
     </>
     )
 };
-  
-export default Skills;
